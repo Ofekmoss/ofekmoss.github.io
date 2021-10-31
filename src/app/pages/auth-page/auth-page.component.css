@@ -1,0 +1,36 @@
+.auth {
+    text-align: center;
+}
+
+/* .btn-toggle {
+    text-align: center;
+    margin-top: 0; 
+    cursor: pointer;
+} */
+/*
+.btn-toggle:hover {
+    background-color: gray;
+    color: white;
+} */
+
+.btn-toggle {
+    text-align: center;
+    /* margin: 1rem; */
+    cursor: pointer;
+    color:white;
+    background-color: #7b2ceb;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    padding: 0.3rem;
+    border-radius: 10%;
+    width: 30%;
+}
+
+.btn-toggle:hover {
+    background-color: #8c46ee;
+    color: white;
+    cursor: pointer;
+}

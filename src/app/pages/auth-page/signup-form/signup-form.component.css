@@ -1,0 +1,28 @@
+.btn-submit {
+    text-align: center;
+    margin: 1rem;
+    cursor: pointer;
+    color:white;
+    background-color: #4400a3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    padding: 0.3rem;
+    border-radius: 10%;
+    width: 20%;
+}
+
+.btn-submit:hover:enabled {
+    background-color: #8c46ee;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-submit:enabled {
+    background-color: #7b2ceb;
+}
+.btn-submit:disabled {
+    cursor: not-allowed;
+}

@@ -1,0 +1,7 @@
+<!-- <p>auth-page works!</p> -->
+<div class="auth">
+    <app-login-form *ngIf="currentPage==='login'"></app-login-form>
+    <app-signup-form *ngIf="currentPage==='signup'"></app-signup-form>
+    <br>
+    <button type="toggle" class="btn-toggle" (click)="onChangePage()">change to {{currentPage==='login' ? 'signup' : 'login'}}</button>
+</div>

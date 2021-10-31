@@ -1,0 +1,29 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <app-input 
+        [placeHolder]="'check'"
+        [label]="'username'"
+        [type]="'text'"
+        [controlName]="'username'"
+        ></app-input>
+    <app-input 
+        [placeHolder]="'check'"
+        [label]="'email'"
+        [type]="'email'"
+        [controlName]="'email'"
+        ></app-input>
+        <app-input 
+        [placeHolder]="'check'"
+        [label]="'password'"
+        [type]="'password'"
+        [controlName]="'password'"></app-input>
+        <app-input 
+        [placeHolder]="'check'"
+        [label]="'confirm password'"
+        [type]="'password'"
+        [controlName]="'confirmPassword'"></app-input>
+    <br>
+    <button 
+        type="submit" 
+        class="btn-submit"
+        [disabled]="!signupForm.valid">signup</button>
+</form>
