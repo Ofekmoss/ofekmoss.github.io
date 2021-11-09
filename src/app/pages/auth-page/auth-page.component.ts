@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-auth-page',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthPageComponent implements OnInit {
   currentPage = 'login';
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
 
   onChangePage() {
     this.currentPage = this.currentPage === 'login' ? 'signup' : 'login';
+    // this.authService.onChangePage()
   }
 }

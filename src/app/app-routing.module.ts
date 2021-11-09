@@ -6,8 +6,9 @@ import { SignupFormComponent } from './pages/auth-page/signup-form/signup-form.c
 import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
-  {path: '', component: HomePageComponent},
-  {path: 'auth', component: AuthPageComponent}
+  {path: '', redirectTo: 'auth', pathMatch: 'full'},
+  {path: 'home', component: HomePageComponent},
+  {path: 'auth', component: AuthPageComponent},
 ];
 
 @NgModule({
