@@ -1,0 +1,23 @@
+.card {
+    width: 11rem;
+    height: 11rem;
+    background-color: rgb(91, 88, 255);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10%;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.row {
+    background-color: rgb(197, 196, 255);
+    width: 85%;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8%;
+}
