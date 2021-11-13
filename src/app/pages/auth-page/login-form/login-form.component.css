@@ -3,15 +3,16 @@
     margin: 1rem;
     cursor: pointer;
     color:white;
-    background-color: #4400a3;
+    background-color: rgb(68, 0, 163,1);
     font-family: Arial, Helvetica, sans-serif;
     font-size: .875rem;
     letter-spacing: .0107142857em;
     font-weight: 500;
     text-transform: none;
     padding: 0.3rem;
-    border-radius: 10%;
+    /* border-radius: 10%; */
     width: 9rem;
+    border-radius: 50px;
 }
 
 .btn-submit:hover:enabled {
@@ -22,6 +23,7 @@
 
 .btn-submit:enabled {
     background-color: #7b2ceb;
+    transition:  all 0.3 ease 0s;
 }
 .btn-submit:disabled {
     cursor: not-allowed;

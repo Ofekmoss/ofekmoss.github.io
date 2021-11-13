@@ -28,7 +28,7 @@ export class AuthService {
     let userId = Math.random();
     console.log(userId);
     localStorage.setItem('activeUserId', JSON.stringify(userId));
-    this.router.navigate(['/home']);
+    this.router.navigate(['/users']);
   }
   public logout() {
     localStorage.removeItem('activeUserId');

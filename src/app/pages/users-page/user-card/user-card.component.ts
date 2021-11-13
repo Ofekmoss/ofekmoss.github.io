@@ -13,4 +13,8 @@ export class UserCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onCardClicked() {
+    this.user.username= 'ofirmoss'
+  }
+
 }

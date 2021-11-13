@@ -7,8 +7,10 @@
 
 input{
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 7%;
-    padding: .3rem;
+    /* border-radius: 7%; */
+    border-radius: 10px;
+    padding: .4rem;
+    width: 25%;
     text-align: center;
     background-color: #f3ebfd;
     border: 1px solid #57515f

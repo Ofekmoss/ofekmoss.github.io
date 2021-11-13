@@ -11,7 +11,10 @@ import { InputComponent } from './generalComponents/input/input.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StoreModule } from '@ngrx/store';
 import { usersListReducer } from './pages/auth-page/store/users-list.reducer';
-import { UserCardComponent } from './pages/home-page/user-card/user-card.component';
+import { HeadersComponent } from './generalComponents/headers/headers.component';
+import { WhoPlaysPageComponent } from './pages/who-plays-page/who-plays-page.component';
+import { UsersPageComponent } from './pages/users-page/users-page.component';
+import { UserCardComponent } from './pages/users-page/user-card/user-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { UserCardComponent } from './pages/home-page/user-card/user-card.compone
     LoginFormComponent,
     SignupFormComponent,
     InputComponent,
-    UserCardComponent
+    UserCardComponent,
+    HeadersComponent,
+    WhoPlaysPageComponent,
+    UsersPageComponent
   ],
   imports: [
     BrowserModule,
