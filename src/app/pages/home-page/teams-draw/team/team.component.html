@@ -1,0 +1,6 @@
+<div class="team__container">
+    <app-stars-rate-sellection id="{{id}}" (starLevel)="starClicked($event)" [currentStar]="currentStar"></app-stars-rate-sellection>
+    <app-team-details [team]="team"></app-team-details>
+    <app-chip class="chip" [item]="teamPlayers[0]" [removable]="false"></app-chip>
+    <app-chip class="chip" [item]="teamPlayers[1]" [removable]="false"></app-chip>
+</div>

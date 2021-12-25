@@ -1,0 +1,6 @@
+<button 
+    (click)="onButtonClicked()"
+    type={{type}} 
+    class="btn-submit" 
+    [disabled]="form ? !form.valid: false || disabled"
+    >{{text}}</button>

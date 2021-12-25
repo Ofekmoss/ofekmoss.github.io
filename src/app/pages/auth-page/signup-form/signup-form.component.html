@@ -1,29 +1,32 @@
+<h1>Signup</h1>
 <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
     <app-input 
-        [placeHolder]="'check'"
-        [label]="'username'"
+        [placeHolder]="'Username'"
         [type]="'text'"
         [controlName]="'username'"
         ></app-input>
     <app-input 
-        [placeHolder]="'check'"
-        [label]="'email'"
+        [placeHolder]="'Email'"
         [type]="'email'"
         [controlName]="'email'"
         ></app-input>
         <app-input 
-        [placeHolder]="'check'"
-        [label]="'password'"
+        [placeHolder]="'Password'"
         [type]="'password'"
         [controlName]="'password'"></app-input>
         <app-input 
-        [placeHolder]="'check'"
-        [label]="'confirm password'"
+        [placeHolder]="'Confirm Password'"
         [type]="'password'"
         [controlName]="'confirmPassword'"></app-input>
     <br>
-    <button 
+    <app-general-button 
+        [type]="'submit'"
+        [form]="signupForm"
+        [text]="'Signup'"
+        class="submit-btn"
+        ></app-general-button>
+    <!-- <button 
         type="submit" 
         class="btn-submit"
-        [disabled]="!signupForm.valid">signup</button>
+        [disabled]="!signupForm.valid">signup</button> -->
 </form>

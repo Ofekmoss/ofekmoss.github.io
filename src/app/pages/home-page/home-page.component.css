@@ -3,3 +3,50 @@
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.home-page__container {
+    /* position: absolute;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available; */
+    background: url('../../../assets/images/stadium.jpg') center;
+    /* background-size: cover;
+    text-align: -webkit-center; */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+  
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+    /* margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background: url('../../../assets/new-images/football_stadium_image.jpg');
+    background-size: cover; */
+}
+
+.home-page__teams-draw {
+    text-align: center;
+    /* margin: 2.5rem 0; */
+    width: 60%;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    .home-page__teams-draw {
+        width: 80%;
+    }
+}
+@media (max-width: 680px) {
+    .home-page__teams-draw {
+        width: 100%;
+    }
+}
+@media (max-width: 400px) {
+    /* .home-page__teams-draw {
+        width: 100%;
+    } */
+}

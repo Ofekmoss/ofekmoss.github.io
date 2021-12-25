@@ -1,0 +1,16 @@
+.example-chip-list {
+    width: 100%;
+}
+
+.chip-list__input {
+    margin-left: 1rem;
+}
+
+input {
+    height: 42px;
+}
+
+::ng-deep .mat-chip-list-class div {
+    height: 50px;
+}
+

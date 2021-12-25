@@ -1,0 +1,25 @@
+.btn-submit {
+    border: 0;
+    background: rgb(56, 55, 55);
+    display: block;
+    margin: 8px auto;
+    text-align: center;
+    border: 2px solid #d6444b;
+    padding: 14px 40px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.btn-submit:enabled:hover {
+    background: #2ecc71;
+}
+
+.btn-submit:disabled {
+    cursor: not-allowed;
+} 
+.btn-submit:enabled {
+    border-color:#2ecc71;
+}

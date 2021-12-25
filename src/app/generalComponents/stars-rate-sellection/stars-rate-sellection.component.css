@@ -1,0 +1,180 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* :host ::ng-deep .stars-rate-sellection__container
+{
+  display: none;
+} */
+.stars-rate-sellection__container {
+    display: flex;
+    /* justify-content: center; */
+    /* position: absolute; */
+    /* top: 50%;
+    left: 50%; */
+    justify-content: center;
+    /* transform: rotateY(180deg); */
+}
+
+/* input {
+    width: 1px;
+    display: none;
+}
+label {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    background: none;
+}
+label:before {
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 40px;
+    color: #101010;
+}
+
+label:after {
+    content: "\f005";
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 40px;
+    color: #1f9cff;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+label:hover:after,
+label:hover ~ label::after,
+input:checked ~ label::after {
+    opacity: 1;
+} */
+
+/* second */
+
+/* input{
+	display: none;
+}
+
+label:before{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 1.5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.half:before{
+	content: '\f089';
+	position: absolute;
+	cursor: pointer;
+}
+
+
+label{
+	color: #ddd;
+	float: right;
+	cursor: pointer;
+}
+
+input:checked ~ label,
+.stars-rate-sellection__container:not(:checked) > label:hover, 
+.stars-rate-sellection__container:not(:checked) > label:hover ~ label{
+	color: #2ce679;
+}
+
+input:checked + label:hover,
+input:checked ~ label:hover,
+label:hover ~ input:checked ~ label,
+input:checked ~ label:hover ~ label{
+    color: #2ddc76;
+} */
+
+.rating-wrap{
+	max-width: 480px;
+	margin: auto;
+	padding: 15px;
+	box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+	text-align: center;
+    /* padding: 0; */
+}
+
+.center{
+	width: 162px; 
+	margin: auto;
+}
+
+
+#rating-value{	
+	width: 110px;
+	margin: 40px auto 0;
+	padding: 10px 5px;
+	text-align: center;
+	box-shadow: inset 0 0 2px 1px rgba(46,204,113,.2);
+}
+
+/*styling star rating*/
+.rating{
+	border: none;
+	float: left;
+    padding: 0;
+}
+
+.rating > input{
+	display: none;
+}
+
+.rating > label:before{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 2.5rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.rating > .half:before{
+	content: '\f089';
+	position: absolute;
+}
+
+
+.rating > label{
+	/* color: #101010; */
+	float: right;
+	cursor: pointer;
+}
+
+.painted {
+    color: goldenrod;
+	/* cursor: not-allowed; */
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+    color: goldenrod;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+    color: goldenrod;
+}
+
+#awayTeam {
+	z-index: 1;
+}
+
+@media (max-width: 480px) {
+	.rating > label:before{
+		font-size: 2rem;
+	}
+}
+@media (max-width: 400px) {
+	.rating > label:before{
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.team-details__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-family: "Montserrat", sans-serif;
+    /* font-weight: 500; */
+    font-size: 2rem;
+    color: #edf0f1;
+}
+.team__photo {
+    /* background: url('../../images/cbayern.png'); */
+    /* background: url('src/app/images/cbayern.png'); */
+    /* background-size: cover; */
+    /* mix-blend-mode: multiply; */
+    width: 150px;
+    height: 160px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .team__photo {
+        width: 120px;
+        height: 130px;
+    } 
+}

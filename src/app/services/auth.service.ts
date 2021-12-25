@@ -8,7 +8,7 @@ import * as usersListActions from '../pages/auth-page/store/users-list.actions'
   providedIn: 'root'
 })
 export class AuthService {
-  constructor(private router: Router, private store: Store<{usersList: {users: User[]}}>) { }
+  constructor(private router: Router, private store: Store<{ usersList: { users: User[] } }>) { }
 
   public checkIfActiveUser() {
     const userId = localStorage.getItem("activeUserId")
@@ -18,20 +18,33 @@ export class AuthService {
       this.router.navigate(['/auth'])
     }
   }
+
+  private makeUserActive(username: string) {
+    let userId = Math.random();
+    console.log(userId);
+    localStorage.setItem('activeUserId', JSON.stringify(userId));
+    if (username) {
+      localStorage.setItem('activeUsername', username);
+    }
+  }
   public signup(user: User) {
     console.log(user);
     this.store.dispatch(new usersListActions.AddUser(user));
+    this.makeUserActive(user.username)
     this.router.navigate(['/home']);
   }
   public login(user: User) {
     console.log(user);
-    let userId = Math.random();
-    console.log(userId);
-    localStorage.setItem('activeUserId', JSON.stringify(userId));
-    this.router.navigate(['/users']);
+    this.makeUserActive(user.username)
+    this.router.navigate(['/home']);
+  }
+  public enterAsGuest() {
+    this.makeUserActive(null)
+    this.router.navigate(['/home']);
   }
   public logout() {
     localStorage.removeItem('activeUserId');
+    localStorage.removeItem('activeUsername');
     this.router.navigate(['/auth']);
   }
 }

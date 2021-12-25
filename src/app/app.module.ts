@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,23 @@ import { HeadersComponent } from './generalComponents/headers/headers.component'
 import { WhoPlaysPageComponent } from './pages/who-plays-page/who-plays-page.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { UserCardComponent } from './pages/users-page/user-card/user-card.component';
+import { GeneralButtonComponent } from './generalComponents/general-button/general-button.component';
+import { TeamsDrawComponent } from './pages/home-page/teams-draw/teams-draw.component';
+import { TeamDetailsComponent } from './generalComponents/team-details/team-details.component';
+import { StarsRateSellectionComponent } from './generalComponents/stars-rate-sellection/stars-rate-sellection.component';
+import { StarRateCollectionComponent } from './generalComponents/stars-rate-sellection/star-rate-collection/star-rate-collection.component';
+import { TeamComponent } from './pages/home-page/teams-draw/team/team.component';
+import { GeneralLinkTextComponent } from './generalComponents/general-link-text/general-link-text.component';
+import { ChipsInputComponent } from './generalComponents/chips-input/chips-input.component';
+import { ChipComponent } from './generalComponents/chips-input/chip/chip.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatChipInput, MatChipsModule, MAT_CHIPS_DEFAULT_OPTIONS } from '@angular/material/chips';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatIconModule} from '@angular/material/icon';
+import { GeneralToggleButtonComponent } from './generalComponents/general-toggle-button/general-toggle-button.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +45,34 @@ import { UserCardComponent } from './pages/users-page/user-card/user-card.compon
     UserCardComponent,
     HeadersComponent,
     WhoPlaysPageComponent,
-    UsersPageComponent
+    UsersPageComponent,
+    GeneralButtonComponent,
+    TeamsDrawComponent,
+    TeamDetailsComponent,
+    StarsRateSellectionComponent,
+    StarRateCollectionComponent,
+    TeamComponent,
+    GeneralLinkTextComponent,
+    ChipsInputComponent,
+    ChipComponent,
+    GeneralToggleButtonComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    StoreModule.forRoot({usersList: usersListReducer})
+    StoreModule.forRoot({usersList: usersListReducer}),
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

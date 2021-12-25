@@ -1,18 +1,24 @@
+<h1>Login</h1>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <app-input 
-        [placeHolder]="'check'"
-        [label]="'username'"
+        [placeHolder]="'Username'"
         [type]="'text'"
         [controlName]="'username'"
         ></app-input>
         <app-input 
-        [placeHolder]="'check'"
-        [label]="'password'"
+        [placeHolder]="'Password'"
         [type]="'password'"
-        [controlName]="'password'"></app-input>
+        [controlName]="'password'"
+        ></app-input>
     <br>
-    <button 
+    <app-general-button 
+        [type]="'submit'"
+        [form]="loginForm"
+        [text]="'Login'"
+        class="submit-btn"
+        ></app-general-button>
+    <!-- <button 
         type="submit" 
         class="btn-submit"
-        [disabled]="!loginForm.valid">login</button>
+        [disabled]="!loginForm.valid">Login</button> -->
 </form>

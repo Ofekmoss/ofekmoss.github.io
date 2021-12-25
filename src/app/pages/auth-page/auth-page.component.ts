@@ -17,4 +17,8 @@ export class AuthPageComponent implements OnInit {
     this.currentPage = this.currentPage === 'login' ? 'signup' : 'login';
     // this.authService.onChangePage()
   }
+
+  onEnterAsGuest() {
+    this.authService.enterAsGuest()
+  }
 }

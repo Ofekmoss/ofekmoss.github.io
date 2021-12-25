@@ -1,21 +1,42 @@
-.auth {
-    text-align: center;
+.auth_container {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    /* border: none; */
+    /* background: url('../../images/user_background.png'); */
+    background: url('../../../assets/new-images/football_stadium_image.jpg');
+    background-size: cover;
 }
 
-/* .btn-toggle {
+.auth_form {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #191919;
     text-align: center;
-    margin-top: 0; 
-    cursor: pointer;
-} */
-/*
-.btn-toggle:hover {
-    background-color: gray;
-    color: white;
-} */
+    border-radius: 20px;
+}
 
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+/* 
+.auth_form input[type = "text"],
+.auth_form input[type = "password"] {} */
+
+/* .auth_form {
+    text-align: center;
+}
 .btn-toggle {
     text-align: center;
-    /* margin: 1rem; */
     cursor: pointer;
     color:white;
     background-color: #7b2ceb;
@@ -37,4 +58,34 @@
     background-color: #8c46ee;
     color: white;
     cursor: pointer;
+} */
+
+
+@media (max-width: 450px) {
+ .auth_form {
+    width: auto;   
+    /* text-align: center; */
+ }   
+}
+
+@media (max-width: 305px) {
+ .auth_container {
+    width: auto;   
+    /* text-align: center; */
+ }   
+}
+
+@media (max-height: 390px) {
+ .auth_form {
+    height: -webkit-fill-available;  
+    /* text-align: center; */
+ }   
+}
+
+@media (min-height: 1000px) and (min-width: 750px) {
+ .auth_form {
+    width: 450px; 
+    height: 350px; 
+    /* text-align: center; */
+ }   
 }

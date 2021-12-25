@@ -1,0 +1,14 @@
+<div class="stars-rate-sellection__container">
+    <fieldset class="rating" id="{{id}}">
+        <input type="radio" id="star5" name="rating" value="5" (click)="onStarClicked('5')"/><label for="star5" class="full"  [ngStyle]="{'color': currentStar == 5 ? 'goldenrod' :  ''}"></label>
+        <input type="radio" id="star4.5" [checked]="currentStar >= 4.5" name="rating" value="4.5" (click)="onStarClicked('4.5')"/><label for="star4.5" class="half" [ngStyle]="{'color': currentStar >= 4.5 ? 'goldenrod' :  ''}"></label>
+        <input type="radio" id="star4" [checked]="currentStar >= 4" name="rating" value="4" (click)="onStarClicked('4')"/><label for="star4" class="full" [ngStyle]="{'color': currentStar >= 4 ? 'goldenrod' :  ''}"></label>
+        <input type="radio" id="star3.5" [checked]="currentStar >= 3.5" name="rating" value="3.5" (click)="onStarClicked('3.5')"/><label for="star3.5" class="half painted" [ngStyle]="{'color': currentStar >= 3.5 ? 'goldenrod' :  ''}"></label>
+        <label for="star3" class="full painted" title="only from 3.5 stars level"></label>
+        <!-- <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label> -->
+        <label for="star2" class="full painted" title="only from 3.5 stars level"></label>
+        <!-- <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label> -->
+        <label for="star1" class="full painted" title="only from 3.5 stars level" ></label>
+        <!-- <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label> -->
+    </fieldset>
+</div>

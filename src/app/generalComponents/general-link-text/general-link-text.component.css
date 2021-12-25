@@ -1,0 +1,15 @@
+.general-link-text__container {
+    width: 80px;
+    text-align: center;
+}
+
+.general-link-text {
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.general-link-text:hover {
+    color: #3498db;
+}
+

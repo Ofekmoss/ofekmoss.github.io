@@ -1,7 +1,22 @@
-<!-- <p>auth-page works!</p> -->
-<div class="auth">
-    <app-login-form *ngIf="currentPage==='login'"></app-login-form>
-    <app-signup-form *ngIf="currentPage==='signup'"></app-signup-form>
-    <br>
-    <button type="toggle" class="btn-toggle" (click)="onChangePage()">change to {{currentPage==='login' ? 'signup' : 'login'}}</button>
+<div class="auth_container">
+    <div class="form__container">
+        <div class="auth_form">
+            <app-login-form *ngIf="currentPage==='login'"></app-login-form>
+            <app-signup-form *ngIf="currentPage==='signup'"></app-signup-form>
+            <br>
+            <!-- <button type="toggle" class="btn-toggle" (click)="onChangePage()">change to {{currentPage==='login' ? 'signup' : 'login'}}</button> -->
+            <!-- <app-general-button 
+                [type]="'toggle'"
+                text="Change To {{currentPage==='login' ? 'Signup' : 'Login'}}"
+                (click)="onChangePage()"></app-general-button> -->
+            <div class="row">
+                <app-general-link-text 
+                    text="{{currentPage==='login' ? 'Signup' : 'Login'}}"
+                    (click)="onChangePage()"></app-general-link-text>
+                <app-general-link-text 
+                    text="Enter As Guest"
+                    (click)="onEnterAsGuest()"></app-general-link-text>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Real Madrid",
+        "league": "Spain",
+        "rank": 5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/als/thumb/3/3f/Real_Madrid_Logo.svg/270px-Real_Madrid_Logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Barcelona",
+        "league": "Spain",
+        "rank": 5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/als/thumb/a/aa/Fc_barcelona.svg/150px-Fc_barcelona.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Bayern Munich",
+        "league": "Germany",
+        "rank": 5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg/2048px-FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Dortmund",
+        "league": "Germany",
+        "rank": 5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/150px-Borussia_Dortmund_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Athletic Bilbao",
+        "league": "Spain",
+        "rank": 4.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Club_Athletic_Bilbao_logo.svg/225px-Club_Athletic_Bilbao_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Atletico Madrid",
+        "league": "Spain",
+        "rank": 4.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Atletico_Madrid_2017_logo.svg/210px-Atletico_Madrid_2017_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Sevilla",
+        "league": "Spain",
+        "rank": 4.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Sevilla_FC_logo.svg/225px-Sevilla_FC_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Rayo Vallecano",
+        "league": "Spain",
+        "rank": 4,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/1/17/Rayo_Vallecano_logo.png",
+        "type": "club"
+    },
+    {
+        "name": "Celta De Vigo",
+        "league": "Spain",
+        "rank": 4,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/RC_Celta_de_Vigo_logo.svg/165px-RC_Celta_de_Vigo_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Real Betis",
+        "league": "Spain",
+        "rank": 4,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/1/13/Real_betis_logo.svg/300px-Real_betis_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Mallorca",
+        "league": "Spain",
+        "rank": 3.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Rcd_mallorca.svg/225px-Rcd_mallorca.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Espanyol",
+        "league": "Spain",
+        "rank": 3.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Rcd_espanyol_logo.svg/195px-Rcd_espanyol_logo.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Granada",
+        "league": "Spain",
+        "rank": 3.5,
+        "image_path": "https://upload.wikimedia.org/wikipedia/en/thumb/d/d5/Logo_of_Granada_Club_de_F%C3%BAtbol.svg/135px-Logo_of_Granada_Club_de_F%C3%BAtbol.svg.png",
+        "type": "club"
+    },
+    {
+        "name": "Spain",
+        "league": "International",
+        "rank": 4.5,
+        "image_path": "",
+        "type": "national"
+    }
+]

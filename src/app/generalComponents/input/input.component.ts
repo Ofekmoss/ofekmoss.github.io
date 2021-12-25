@@ -21,6 +21,7 @@ export class InputComponent implements OnInit {
   @Input() label: string;
   @Input() type: string= 'text';
   @Input() controlName: string;
+  @Input() custom_style= null;
 
   constructor() { }
 

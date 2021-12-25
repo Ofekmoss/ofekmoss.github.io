@@ -1,0 +1,25 @@
+<!-- <app-input 
+        [placeHolder]="'Password'"
+        [type]="'password'"
+        [controlName]="'password'"
+        ></app-input> -->
+<mat-form-field class="example-chip-list" appearance="fill">
+        <mat-label style="font-size: 1.5rem;">{{title}}</mat-label>
+        <br>
+        <br>
+        <!-- <br> -->
+        <mat-chip-list class="mat-chip-list-class" #chipList aria-label="Items selection">
+                <!-- [backgroundColor]="itemsSide.homeTeam.includes(item) ? 'blue' : 'red'" -->
+                <app-chip *ngFor="let item of items" [item]="item"  (itemRemoved)="onItemRemoved($event)">
+                </app-chip>
+                <input style="margin-left: 1rem;" *ngIf="items.length < 4" placeholder="{{placeHolder}}" #itemInput [formControl]="itemCtrl" [matAutocomplete]="auto"
+                        [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let item of filteredItems | async" [value]="item">
+                        {{item}}
+                </mat-option>
+        </mat-autocomplete>
+</mat-form-field>
+<!-- <app-chip></app-chip> -->

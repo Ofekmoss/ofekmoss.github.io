@@ -1,0 +1,8 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+.star-rate-collection__container {
+    /* background: url("../../../new-images/star.png"); */
+    width: 10px;
+    height: 10px;
+    /* text-align: center; */
+}
+
