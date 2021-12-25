@@ -69,4 +69,28 @@ button:hover {
         display: flex;
         width: 100%;
     }
+    .nav__links li {
+        margin: auto;
+    }
+}
+@media (max-width: 450px) {
+    header {
+        padding: 30px 4%;
+    }
+}
+@media (max-width: 385px) {
+    li,a,button {
+        font-size: 13px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+}
+@media (max-width: 350px) {
+    li,a,button {
+        font-size: 11px;
+    }
+    .logo {
+        font-size: 19px;
+    }
 }

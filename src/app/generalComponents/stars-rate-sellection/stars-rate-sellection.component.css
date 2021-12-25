@@ -168,7 +168,7 @@ input:checked ~ label:hover ~ label{
 	z-index: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
 	.rating > label:before{
 		font-size: 2rem;
 	}

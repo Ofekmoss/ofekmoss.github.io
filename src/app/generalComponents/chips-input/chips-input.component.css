@@ -10,7 +10,14 @@ input {
     height: 42px;
 }
 
+/* .mat-chip-list-class {
+    margin-top: 100px;
+}
+.mat-label {
+    margin-bottom: 1000px;
+} */
 ::ng-deep .mat-chip-list-class div {
     height: 50px;
+    margin-top: 10px;
 }
 

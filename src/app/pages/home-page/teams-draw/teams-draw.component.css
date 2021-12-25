@@ -76,8 +76,13 @@
         display: none;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 550px){
     .chips-input {
         width: 375px;
+    }
+}
+@media (max-width: 470px){
+    .chips-input {
+        width: 275px;
     }
 }
