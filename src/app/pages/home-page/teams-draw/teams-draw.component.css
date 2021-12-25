@@ -67,7 +67,7 @@
 .team {
     width: 50%;
 }
-@media (max-width: 610px){
+@media (max-width: 610px) and (max-height: 700px){
     /* .draw_button {
         position: absolute;
         top: 450px;
