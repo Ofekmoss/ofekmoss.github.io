@@ -1,19 +1,12 @@
 <div class="teams-draw__container">
-    <div class="team-draw__buttons">
-        <div class="team-draw-buttons__container">
-            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onNationalClick()" text="National Teams" [checked]="false"></app-general-toggle-button>
-            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onSyncStarsClick()" text="Sync Stars" [checked]="false"></app-general-toggle-button>
-            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onSaveCouplesClick()" text="Save Couples" [checked]="false"></app-general-toggle-button>
-        </div>
-    </div>    
     <app-chips-input 
-        class="chips-input"
-        [title]="'Players List:'"
-        [placeHolder]="'New Player...'"
-        [limit]="4" 
-        [itemsSide]="teamPlayers"
-        (currentItems)="onPlayersChange($event)"
-        ></app-chips-input>
+    class="chips-input"
+    [title]="'Players List:'"
+    [placeHolder]="'New Player...'"
+    [limit]="4" 
+    [itemsSide]="teamPlayers"
+    (currentItems)="onPlayersChange($event)"
+    ></app-chips-input>
     <!-- <div class="draw-data_row">
     </div> -->
     <div class="row">
@@ -27,4 +20,11 @@
         [text]="'DRAW'"
         (buttonClicked)="onDrawClick()"></app-general-button>
     </div>
+    <div class="team-draw__buttons">
+        <div class="team-draw-buttons__container">
+            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onNationalClick()" text="National Teams" [checked]="false"></app-general-toggle-button>
+            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onSyncStarsClick()" text="Sync Stars" [checked]="false"></app-general-toggle-button>
+            <app-general-toggle-button class="team-draw-button" (buttonClicked)="onSaveCouplesClick()" text="Save Couples" [checked]="false"></app-general-toggle-button>
+        </div>
+    </div>    
 </div>

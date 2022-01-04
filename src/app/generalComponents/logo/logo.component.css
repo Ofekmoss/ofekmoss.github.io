@@ -1,0 +1,37 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+.logo__container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.logo_text {
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+    font-weight: 500;
+    font-weight: bold;   
+    font-size: 35px; 
+    margin-right: 10px;
+    align-self: center;
+}
+
+
+label:before{
+	content: '\f1e3';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 40px;
+	display: inline-block;
+    color: white;
+}
+
+
+/* .full {
+    content: '\f089';
+	font-family: FontAwesome;
+	margin: 5px;
+	font-size: 2.5rem;
+	display: inline-block;
+	cursor: pointer;
+} */

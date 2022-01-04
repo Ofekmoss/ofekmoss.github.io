@@ -1,0 +1,31 @@
+<div class="user-friends__container">
+    <div class="title">
+        Your Friends List
+    </div>
+    <div class="friends-list">
+        <app-general-friend
+            *ngFor="let user of userFriends; let i = index"
+            [name]="user.username"
+            (removeClicked)="onRemoveFriendClick(i)">
+        </app-general-friend>
+    </div>
+    <div class="add-friend__container">
+        <form [formGroup]="addFriendForm" (ngSubmit)="onAddFriendClick()">
+            <app-input 
+                [placeHolder]="'friend username'"
+                [type]="'text'"
+                [controlName]="'username'"
+                [custom_style]="{ width: '100px'}"></app-input>
+            <a class="add-friend">
+                <button 
+                    class="add-friend-button" 
+                    type="submit"
+                    [disabled]="!addFriendForm.valid"></button>
+            </a>
+        </form>
+    </div>
+        <!-- <app-general-button
+            [text]="'+'"
+        >
+        </app-general-button> -->
+</div>

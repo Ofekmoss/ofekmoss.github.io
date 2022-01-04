@@ -11,13 +11,31 @@
     background-size: cover;
 }
 
+.auth-data__container {
+    width: 50%;
+    height: 100%;
+    /* padding: 40px; */
+    /* position: absolute; */
+    /* top:  50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    /* background: #191919; */
+    /* text-align: center; */
+    /* border-radius: 20px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .auth_form {
     width: 300px;
     padding: 40px;
-    position: absolute;
+    /* position: absolute; */
     top:  50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    /* transform: translate(-50%,-50%); */
     background: #191919;
     text-align: center;
     border-radius: 20px;
@@ -28,6 +46,12 @@
     display: flex;
     justify-content: space-between;
 }
+
+.logo__container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* 
 .auth_form input[type = "text"],
 .auth_form input[type = "password"] {} */

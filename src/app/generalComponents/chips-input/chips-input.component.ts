@@ -38,7 +38,8 @@ export class ChipsInputComponent implements OnInit {
     );
   }
   ngOnInit(): void {
-    localStorage.getItem("activeUsername") !== null ? this.items.push(localStorage.getItem("activeUsername")) : console.log('guest');
+    const username = JSON.parse(localStorage.getItem("activeUser")).username;
+    username ? this.items.push(username) : console.log('guest');
     this.currentItems.emit(this.items)
   }
 

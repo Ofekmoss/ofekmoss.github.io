@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.user-page__container {
+    background: url('../../../assets/images/stadium.jpg') center;
+    position: fixed;
+    background-size: cover; 
+    top: 0; 
+    left: 0; 
+    
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+    font-weight: 500;
+    font-weight: bold;   
+    font-size: 35px; 
+    text-align: center;
+    padding: 70px;
+}
+
+.user-page__data {
+    display: flex;
+    justify-content: center;
+}

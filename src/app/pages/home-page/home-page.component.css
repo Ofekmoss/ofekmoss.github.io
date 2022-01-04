@@ -11,10 +11,11 @@
     background: url('../../../assets/images/stadium.jpg') center;
     /* background-size: cover;
     text-align: -webkit-center; */
-    position: fixed; 
+    position: fixed;
+    background-size: cover; 
     top: 0; 
     left: 0; 
-  
+    
     /* Preserve aspet ratio */
     min-width: 100%;
     min-height: 100%;

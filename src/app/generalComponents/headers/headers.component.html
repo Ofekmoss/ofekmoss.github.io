@@ -8,5 +8,8 @@
             <!-- <li><a href="#">Logout</a></li> -->
         </ul>
     </nav>
-    <a (click)="onLogout()" class="cta"><button>Logout</button></a>
+    <div class="auth-headers">
+        <a (click)="onLogout()" class="cta"><button>{{guestUser ? 'Login' : 'Logout'}}</button></a>
+        <a (click)="onUserIconClick()" class="user-page" *ngIf="!guestUser"><button class="user-button"></button></a>
+    </div>
 </header>

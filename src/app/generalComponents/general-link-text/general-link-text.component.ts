@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GeneralLinkTextComponent implements OnInit {
   @Input() text: string;
+  @Input() custom_style= null;
 
   constructor() { }
 

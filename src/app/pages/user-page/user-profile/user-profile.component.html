@@ -1,0 +1,40 @@
+<div class="user-profile__container">
+    <div class="title">
+        Edit Your Profile
+    </div>
+    <form [formGroup]="profileEditForm" (ngSubmit)="onSubmit()">
+        <app-input 
+            [type]="'text'"
+            [controlName]="'username'"
+            [label]="'Username:'"
+            ></app-input>
+            <app-input 
+            [type]="'email'"
+            [controlName]="'email'"
+            [label]="'Email:'"
+            ></app-input>
+            <app-input 
+            [placeHolder]="'Old Password'"
+            [type]="'password'"
+            [controlName]="'oldPassword'"></app-input>
+            <app-input 
+            [placeHolder]="'New Password'"
+            [type]="'password'"
+            [controlName]="'newPassword'"></app-input>
+            <app-input 
+            [placeHolder]="'Confirm New Password'"
+            [type]="'password'"
+            [controlName]="'confirmNewPassword'"></app-input>
+        <br>
+        <app-general-button 
+            [type]="'submit'"
+            [form]="profileEditForm"
+            [text]="'EDIT'"
+            class="submit-btn"
+            ></app-general-button>
+        <!-- <button 
+            type="submit" 
+            class="btn-submit"
+            [disabled]="!signupForm.valid">signup</button> -->
+    </form>
+</div>

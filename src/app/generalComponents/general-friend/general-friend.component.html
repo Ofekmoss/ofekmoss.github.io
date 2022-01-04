@@ -1,0 +1,12 @@
+<div class="general-friend__container">
+    <div class="name">
+        {{name}}
+    </div>
+    <app-general-link-text 
+        (mouseover)="hover=true" (mouseleave)="hover=false"
+        [text]="'remove'"
+        [custom_style]="{ color: hover==true ? '#ab0000': 'red'}"
+        (click)="onRemove()"
+    >
+    </app-general-link-text>
+</div>

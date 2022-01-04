@@ -33,6 +33,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
 import { GeneralToggleButtonComponent } from './generalComponents/general-toggle-button/general-toggle-button.component';
+import { LogoComponent } from './generalComponents/logo/logo.component';
+import { UserPageComponent } from './pages/user-page/user-page.component';
+import { SecondHeadersComponent } from './pages/user-page/second-headers/second-headers.component';
+import { UserProfileComponent } from './pages/user-page/user-profile/user-profile.component';
+import { UserFriendsComponent } from './pages/user-page/user-friends/user-friends.component';
+import { UserRequestsComponent } from './pages/user-page/user-requests/user-requests.component';
+import { GeneralFriendComponent } from './generalComponents/general-friend/general-friend.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +63,13 @@ import { GeneralToggleButtonComponent } from './generalComponents/general-toggle
     ChipsInputComponent,
     ChipComponent,
     GeneralToggleButtonComponent,
+    LogoComponent,
+    UserPageComponent,
+    SecondHeadersComponent,
+    UserProfileComponent,
+    UserFriendsComponent,
+    UserRequestsComponent,
+    GeneralFriendComponent,
   ],
   imports: [
     BrowserModule,

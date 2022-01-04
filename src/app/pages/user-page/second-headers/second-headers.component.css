@@ -5,54 +5,62 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #24252a;
+}
+/* 
+ul {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.link {
+    background-color: rgb(175, 175, 175,0.8);
+    border:1px solid black;
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
 }
 
-li,a,button {
+.link:hover {
+    background-color: rgb(175, 175, 175,1);
+    color: black;
+}
+
+.active {
+    background-color: rgb(175, 175, 175,1);
+    color: black;
+}
+
+
+li,a {
+    color: #edf0f1;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #edf0f1;
     text-decoration: none;
 }
 
 header {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     align-items: center;
-    padding: 30px 10%;
+    /* padding: 8px 10%; */
     width: 100%;
-}
-
-.logo {
-    cursor: pointer;
-    color: #edf0f1;
 }
 
 .nav__links {
     list-style: none;
-}
-
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav__links li a {
-    transition:  all 0.3 ease 0s;
-}
-
-.nav__links li a:hover {
-    color: #0088a9;
+    display: flex;
+    justify-content: space-between;
 }
 
 .active a{
-    color: #0088a9;
+    color: black;
     font-weight: bold;
 }
-
+/* 
 button {
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
@@ -69,8 +77,6 @@ button:hover {
 .user-button:before {
     content: '\f007';
     font-family: FontAwesome;
-    /* padding: 0; */
-    /* margin: 5px; */
     font-size: 25px;
     display: inline-block;
     color: white;
@@ -83,7 +89,7 @@ button:hover {
 
 .auth-headers {
     display: flex;
-}
+} */
 
 @media (max-width: 515px) {
     .nav__links {
