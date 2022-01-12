@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-auth-page',
   templateUrl: './auth-page.component.html',
-  styleUrls: ['./auth-page.component.css']
+  styleUrls: ['./auth-page.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthPageComponent implements OnInit {
   currentPage = 'login';

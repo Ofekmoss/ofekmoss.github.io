@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-headers',
   templateUrl: './headers.component.html',
-  styleUrls: ['./headers.component.css']
+  styleUrls: ['./headers.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeadersComponent implements OnInit {
   guestUser: boolean;

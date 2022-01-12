@@ -1,0 +1,72 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.user-friends__container {
+    width: 300px;
+    padding: 40px;
+    /* position: absolute; */
+    /* top:  50%;
+    left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    background: rgb(25, 25, 25, 0.9);
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 350px;
+    justify-content: space-between;
+}
+
+
+.title {
+    font-family: "Montserrat", sans-serif;
+    color: #edf0f1;
+    font-weight: 500;
+    font-weight: bold;   
+    font-size: 32px; 
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.friends-list {
+    width: 280px;
+    height: inherit;
+    overflow: auto;
+}
+
+.add-friend__container {
+    /* align-self: flex-end; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* text-align: center; */
+    width: 300px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.add-friend-button::before {
+    content: '\f234';
+    font-family: FontAwesome;
+    /* padding: 0; */
+    /* margin: 5px; */
+    font-size: 30px;
+    /* display: inline-block; */
+    color: white;
+}
+
+button {
+    /* padding: 9px 15px; */
+    /* background-color: rgba(0,136,169,1); */
+    background: none;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  all 0.3 ease 0s;
+}
+
+.add-friend:hover button::before{
+    color: rgba(0,136,169,1);
+}

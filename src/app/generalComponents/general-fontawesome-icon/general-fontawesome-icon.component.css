@@ -1,0 +1,16 @@
+.general-fontawesome-icon__container {
+    /* padding: 0; */
+    /* margin: 5px; */
+    /* font-size: 30px; */
+    /* display: inline-block; */
+    color: white;
+    cursor: pointer;
+}
+
+i {
+    transition:  all 0.3 ease 0s;
+}
+
+/* .general-fontawesome-icon__container:hover{
+    color: rgba(0,136,169,1);
+} */

@@ -1,17 +1,30 @@
 <div class="teams-draw__container">
-    <app-chips-input 
-    class="chips-input"
-    [title]="'Players List:'"
-    [placeHolder]="'New Player...'"
-    [limit]="4" 
-    [itemsSide]="teamPlayers"
-    (currentItems)="onPlayersChange($event)"
-    ></app-chips-input>
+    <app-general-dialog *ngIf="openDialog" (dialogData)="onDialogClosed($event)"></app-general-dialog>
+    <div class="row">
+        <app-chips-input 
+        class="chips-input"
+        [title]="'Players List:'"
+        [placeHolder]="'New Player...'"
+        [limit]="4" 
+        [itemsSide]="teamPlayers"
+        [items]="currentChips"
+        (currentItems)="onPlayersChange($event)"
+        (friendItemRemoved)="onFriendChipRemoved($event)"
+        ></app-chips-input>
+        <app-general-dropdown-menu
+            [text]="'Friends List'"
+            [optionList]="userFriends"
+            (optionClicked)="onAddFriendClick($event)"
+            *ngIf="!guestUser"
+            [disabled]="currentChips.length === 4"
+            >
+        </app-general-dropdown-menu>
+    </div>
     <!-- <div class="draw-data_row">
     </div> -->
     <div class="row">
-        <app-team class="team" id="team1" [team]="current_teamA" [id]="'homeTeam'" [teamPlayers]="teamPlayers.homeTeam" (starLevel)="onTeamAStarClicked($event)"></app-team>
-        <app-team class="team" id="team2" [team]="current_teamB" [id]="'awayTeam'" [teamPlayers]="teamPlayers.awayTeam" (starLevel)="onTeamBStarClicked($event)"></app-team>
+        <app-team class="team" id="team1" [id]="'homeTeam'" [teamPlayers]="teamPlayers.homeTeam" (starLevel)="onTeamAStarClicked($event)"></app-team>
+        <app-team class="team" id="team2" [id]="'awayTeam'" [teamPlayers]="teamPlayers.awayTeam" (starLevel)="onTeamBStarClicked($event)"></app-team>
     </div>
     <div class="draw_button">
         <!-- [disabled]="currentPlayers.length % 2 !== 0" -->

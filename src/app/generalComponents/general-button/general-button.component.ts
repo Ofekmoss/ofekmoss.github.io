@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ControlContainer, FormGroup, FormGroupDirective } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,8 @@ import { ControlContainer, FormGroup, FormGroupDirective } from '@angular/forms'
       provide: ControlContainer,
       useExisting: FormGroupDirective
     }
-  ]
+  ],
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GeneralButtonComponent implements OnInit {
   @Input() type: String = 'submit';

@@ -4,6 +4,13 @@
     </div>
     <div class="friends-list">
         <app-general-friend
+            *ngFor="let user of userRequestsPending; let i = index"
+            [name]="user.username"
+            (removeClicked)="onRemoveFriendClick(i)"
+            [friendRequestPending]="true"
+            >
+        </app-general-friend>
+        <app-general-friend
             *ngFor="let user of userFriends; let i = index"
             [name]="user.username"
             (removeClicked)="onRemoveFriendClick(i)">
@@ -16,12 +23,21 @@
                 [type]="'text'"
                 [controlName]="'username'"
                 [custom_style]="{ width: '100px'}"></app-input>
-            <a class="add-friend">
+            <!-- <a class="add-friend">
                 <button 
                     class="add-friend-button" 
                     type="submit"
                     [disabled]="!addFriendForm.valid"></button>
-            </a>
+            </a> -->
+            <button class="add-friend-button" [disabled]="!addFriendForm.valid">
+                <div>
+                    <app-general-fontawesome-icon
+                        class="add-friend-icon"
+                        [iconClassName]="'fa-user-plus'"
+                        [hoverColor]="'rgba(0,136,169,1)'"
+                    ></app-general-fontawesome-icon>
+                </div>
+            </button>
         </form>
     </div>
         <!-- <app-general-button

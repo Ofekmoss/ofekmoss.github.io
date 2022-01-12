@@ -28,7 +28,8 @@
 }
 
 .chips-input {
-    width: 450px;
+    width: 350px;
+    height: 150px;
     /* width: 100%; */
     /* margin-bottom: 1.5rem; */
     margin: 10px;

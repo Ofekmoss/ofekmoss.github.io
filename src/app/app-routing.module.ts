@@ -4,6 +4,7 @@ import { AuthPageComponent } from './pages/auth-page/auth-page.component';
 import { LoginFormComponent } from './pages/auth-page/login-form/login-form.component';
 import { SignupFormComponent } from './pages/auth-page/signup-form/signup-form.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { UserFriendsComponent } from './pages/user-page/user-friends/user-friends.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
 import { UserProfileComponent } from './pages/user-page/user-profile/user-profile.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   },
   {path: 'home', component: HomePageComponent},
   {path: 'who-plays', component: WhoPlaysPageComponent},
+  {path: 'stats', component: StatsPageComponent},
   {path: 'auth', component: AuthPageComponent},
 ];
 

@@ -1,0 +1,37 @@
+<div class="general-game-data__container">
+    <div class="date">
+        {{game.time}}
+    </div>
+    <div class="game-data">
+        <div class="homeTeam team">
+            <app-team-details class="team-details" [team]="homeTeam">
+            </app-team-details>
+            <div class="teamPlayers">
+                <div class="player">
+                    {{homePlayers.length > 0 ? (homePlayers[0] ? homePlayers[0].username : 'Guest') : ''}}
+                </div>
+                <div class="player">
+                    {{homePlayers.length > 1 ? (homePlayers[1] ? homePlayers[1].username : 'Guest') : ''}}
+                </div>
+            </div>
+        </div>
+        <div class="score">
+            {{game.homeTeam.score}} - {{game.awayTeam.score}}
+        </div>
+        <div class="awayTeam team">
+            <app-team-details class="team-details" [team]="awayTeam">
+            </app-team-details>
+            <div class="teamPlayers">
+                <!-- <div class="player" *ngFor="let player of awayPlayers">
+                    {{player ? player.username : 'Guest'}}
+                </div> -->
+                <div class="player">
+                    {{awayPlayers.length > 0 ? (awayPlayers[0] ? awayPlayers[0].username : 'Guest') : ''}}
+                </div>
+                <div class="player">
+                    {{awayPlayers.length > 1 ? (awayPlayers[1] ? awayPlayers[1].username : 'Guest') : ''}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="stats-page__container">
+    <app-headers></app-headers>
+    <div class="stats-page__data">
+        <div class="data__games-graph">
+            <app-general-pie-graph [chartLabels]="['win','draw','lose']"></app-general-pie-graph>
+        </div>
+        <div class="data__last-games-table">
+            table
+        </div>
+        <div class="data__games">
+            <app-general-game-data class="game-data" *ngFor="let gameStats of gameStatsService.gamesStats" [game]="gameStats">
+            </app-general-game-data>
+        </div>
+    </div>
+</div>

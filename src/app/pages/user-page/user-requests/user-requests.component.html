@@ -1,1 +1,18 @@
-<p>user-requests works!</p>
+<div class="user-friends__container">
+    <div class="title">
+        Friends Requests
+    </div>
+    <div class="friends-list">
+        <app-general-friend
+            [friendRequest]="true"
+            *ngFor="let user of userRequests; let i = index"
+            [name]="user.username"
+            (approveClicked)="onApproveRequestClick(i)"
+            (declineClicked)="onDeclineRequestClick(i)">
+        </app-general-friend>
+    </div>
+        <!-- <app-general-button
+            [text]="'+'"
+        >
+        </app-general-button> -->
+</div>

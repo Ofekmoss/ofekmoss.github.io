@@ -32,6 +32,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 import { GeneralToggleButtonComponent } from './generalComponents/general-toggle-button/general-toggle-button.component';
 import { LogoComponent } from './generalComponents/logo/logo.component';
 import { UserPageComponent } from './pages/user-page/user-page.component';
@@ -40,6 +41,17 @@ import { UserProfileComponent } from './pages/user-page/user-profile/user-profil
 import { UserFriendsComponent } from './pages/user-page/user-friends/user-friends.component';
 import { UserRequestsComponent } from './pages/user-page/user-requests/user-requests.component';
 import { GeneralFriendComponent } from './generalComponents/general-friend/general-friend.component';
+import { GeneralFontawesomeIconComponent } from './generalComponents/general-fontawesome-icon/general-fontawesome-icon.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { GeneralDropdownMenuComponent } from './generalComponents/general-dropdown-menu/general-dropdown-menu.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatButtonModule} from '@angular/material/button';
+import { GeneralDialogComponent } from './generalComponents/general-dialog/general-dialog.component';
+import { DialogComponent } from './generalComponents/general-dialog/dialog/dialog.component';
+import { StatsPageComponent } from './pages/stats-page/stats-page.component';
+import { GeneralGameDataComponent } from './generalComponents/general-game-data/general-game-data.component';
+import { GeneralPieGraphComponent } from './generalComponents/general-pie-graph/general-pie-graph.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -70,6 +82,13 @@ import { GeneralFriendComponent } from './generalComponents/general-friend/gener
     UserFriendsComponent,
     UserRequestsComponent,
     GeneralFriendComponent,
+    GeneralFontawesomeIconComponent,
+    GeneralDropdownMenuComponent,
+    GeneralDialogComponent,
+    DialogComponent,
+    StatsPageComponent,
+    GeneralGameDataComponent,
+    GeneralPieGraphComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +102,12 @@ import { GeneralFriendComponent } from './generalComponents/general-friend/gener
     MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatMenuModule,    
+    MatButtonModule,
+    MatDialogModule,
+    FontAwesomeModule,
+    NgChartsModule
   ],
   providers: [
   ],

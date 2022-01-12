@@ -1,0 +1,35 @@
+.dialog__container {
+}
+.row {
+    display: flex;
+    width: 310px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.form-field {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.actions-row {
+    display: flex;
+    justify-content: center;
+}
+
+.save-button {
+    background: rgb(230, 228, 228);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

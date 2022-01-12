@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/shared/user.model';
@@ -6,7 +6,8 @@ import { User } from 'src/app/shared/user.model';
 @Component({
   selector: 'app-user-profile',
   templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css']
+  styleUrls: ['./user-profile.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserProfileComponent implements OnInit {
   profileEditForm: FormGroup;
@@ -18,7 +19,7 @@ export class UserProfileComponent implements OnInit {
     this.profileEditForm = new FormGroup({
       'username': new FormControl(this.currentUser.username, Validators.required),
       'email': new FormControl(this.currentUser.email, [Validators.required, Validators.email]),
-      'oldPassword': new FormControl('', Validators.required),
+      // 'oldPassword': new FormControl('', Validators.required),
       'newPassword': new FormControl('', Validators.required),
       'confirmNewPassword': new FormControl('', Validators.required),
     })

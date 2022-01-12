@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { ControlContainer, FormControl, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +14,8 @@ import { ControlContainer, FormControl, FormGroup, FormGroupDirective, Validator
       provide: ControlContainer,
       useExisting: FormGroupDirective
     }
-  ]
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputComponent implements OnInit {
   @Input() placeHolder: string;

@@ -1,9 +1,11 @@
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 .logo__container {
+    /* height: 40px; */
     display: flex;
     /* align-items: center; */
     justify-content: center;
+    align-items: center;
 }
 
 .logo_text {
@@ -11,7 +13,7 @@
     color: #edf0f1;
     font-weight: 500;
     font-weight: bold;   
-    font-size: 35px; 
+    /* font-size: 35px;  */
     margin-right: 10px;
     align-self: center;
 }
@@ -20,8 +22,8 @@
 label:before{
 	content: '\f1e3';
 	font-family: FontAwesome;
-	margin: 5px;
-	font-size: 40px;
+	/* margin: 5px; */
+	/* font-size: 40px; */
 	display: inline-block;
     color: white;
 }

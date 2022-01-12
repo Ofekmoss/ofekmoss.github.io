@@ -2,11 +2,37 @@
     <div class="name">
         {{name}}
     </div>
-    <app-general-link-text 
-        (mouseover)="hover=true" (mouseleave)="hover=false"
-        [text]="'remove'"
-        [custom_style]="{ color: hover==true ? '#ab0000': 'red'}"
-        (click)="onRemove()"
+    <div class="friend-list"
+        *ngIf="!friendRequest" 
     >
-    </app-general-link-text>
+        <app-general-link-text
+            *ngIf="!friendRequestPending"
+            (mouseover)="hover=true" (mouseleave)="hover=false"
+            [text]="'remove'"
+            [custom_style]="{ color: hover==true ? '#ab0000': 'red'}"
+            (click)="onRemove()"
+            >
+        </app-general-link-text>
+        <div class="friend-pending"
+        *ngIf="friendRequestPending"    
+        >
+            PENDING
+        </div>
+    </div>
+    <div class="friend-request" *ngIf="friendRequest">
+        <div class="approve">
+            <app-general-fontawesome-icon
+                (click)="onApprove()"   
+                [iconClassName]="'fa-user-plus'"
+                [hoverColor]="'green'"
+            ></app-general-fontawesome-icon>
+        </div>
+        <div class="decline">
+            <app-general-fontawesome-icon
+                (click)="onDecline()"
+                [iconClassName]="'fa-user-times'"
+                [hoverColor]="'red'"
+            ></app-general-fontawesome-icon>
+        </div>
+    </div>
 </div>

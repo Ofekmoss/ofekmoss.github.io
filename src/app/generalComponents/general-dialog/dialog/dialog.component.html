@@ -1,0 +1,54 @@
+<div class="dialog__container">
+    <h1 mat-dialog-title>Let's Save The Score</h1>
+    <div mat-dialog-content>
+      <p>What's the score?</p>
+      <!-- <div class="row">
+    </div> -->
+          <!-- <app-general-dropdown-menu
+            [text]="Home Team"
+            [optionList]="[0,1,2,3,4,5,6]"
+          >
+        </app-general-dropdown-menu> -->
+
+        <!-- <mat-form-field appearance="fill" class="form-field">
+          <mat-label>Home Team</mat-label>
+          <input type="number" matInput [(ngModel)]="data.input1">
+        </mat-form-field>
+          
+          <mat-form-field appearance="fill" class="form-field">
+            <mat-label>Away Team</mat-label>
+            <input type="number" matInput [(ngModel)]="data.input2">
+          </mat-form-field> -->
+
+    <form class="example-form row">
+        <mat-form-field class="example-full-width form-field" appearance="fill">
+            <mat-label>Home Team</mat-label>
+            <input type="number" matInput [formControl]="homeTeamFormControl" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+            <mat-error *ngIf="(homeTeamFormControl.hasError('min') || homeTeamFormControl.hasError('max')) && !homeTeamFormControl.hasError('required')">
+                Please enter a valid score
+            </mat-error>
+            <mat-error *ngIf="homeTeamFormControl.hasError('required')">
+                Score is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+        <div class="VS">
+            VS
+        </div>
+        <mat-form-field class="example-full-width form-field" appearance="fill">
+            <mat-label>Away Team</mat-label>
+            <input type="number" matInput [formControl]="awayTeamFormControl" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+            <!-- <mat-error *ngIf="(awayTeamFormControl.hasError('min') || awayTeamFormControl.hasError('maxLength')) && !awayTeamFormControl.hasError('required')"> -->
+            <mat-error *ngIf="(awayTeamFormControl.hasError('min') || awayTeamFormControl.hasError('max')) && !awayTeamFormControl.hasError('required')">
+                Please enter a valid score
+            </mat-error>
+            <mat-error *ngIf="awayTeamFormControl.hasError('required')">
+                Score is <strong>required</strong>
+            </mat-error>
+        </mat-form-field>
+    </form>
+    </div>
+    <div mat-dialog-actions class="actions-row">
+      <button mat-button (click)="onNoClick()">No Thanks</button>
+      <button mat-button [mat-dialog-close]="[homeTeamFormControl.value, awayTeamFormControl.value]" cdkFocusInitial class="save-button" [disabled]="!homeTeamFormControl.valid || !awayTeamFormControl.valid">Save</button>
+    </div>
+</div>

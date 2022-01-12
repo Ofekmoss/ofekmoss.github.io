@@ -18,6 +18,12 @@
   width: 50%
 }
 
+.team-details {
+  width: 150px;
+  height: 215px;
+  font-size: 2rem;
+}
+
 @media (max-width: 480px) {
   
 }

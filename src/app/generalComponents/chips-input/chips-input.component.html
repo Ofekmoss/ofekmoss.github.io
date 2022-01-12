@@ -3,23 +3,29 @@
         [type]="'password'"
         [controlName]="'password'"
         ></app-input> -->
-<mat-form-field class="example-chip-list" appearance="fill">
-        <mat-label style="font-size: 1.5rem;" class="mat-label">{{title}}</mat-label>
-        <!-- <br>
-        <br> -->
-        <!-- <br> -->
-        <mat-chip-list class="mat-chip-list-class" #chipList aria-label="Items selection">
-                <!-- [backgroundColor]="itemsSide.homeTeam.includes(item) ? 'blue' : 'red'" -->
-                <app-chip *ngFor="let item of items" [item]="item"  (itemRemoved)="onItemRemoved($event)">
-                </app-chip>
-                <input style="margin-left: 1rem;" *ngIf="items.length < 4" placeholder="{{placeHolder}}" #itemInput [formControl]="itemCtrl" [matAutocomplete]="auto"
-                        [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                        (matChipInputTokenEnd)="add($event)">
-        </mat-chip-list>
-        <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
-                <mat-option *ngFor="let item of filteredItems | async" [value]="item">
-                        {{item}}
-                </mat-option>
-        </mat-autocomplete>
-</mat-form-field>
+<div class="chips-input__container">
+        <mat-form-field class="example-chip-list" appearance="fill">
+                <mat-label style="font-size: 1.5rem;" class="mat-label">{{title}}</mat-label>
+                <!-- <br>
+                <br> -->
+                <!-- <br> -->
+                <mat-chip-list class="mat-chip-list-class" #chipList aria-label="Items selection">
+                        <!-- [backgroundColor]="itemsSide.homeTeam.includes(item) ? 'blue' : 'red'" -->
+                        <!-- <app-chip *ngFor="let item of currentChips" [item]="item"  (itemRemoved)="onItemRemoved($event)">
+                        </app-chip> -->
+                        <app-chip *ngFor="let item of items; let i=index" [index]="i" [item]="userService.getUserById(item.userId) ? userService.getUserById(item.userId).username : item.friendName"  (itemRemoved)="onItemRemoved($event)">
+                        </app-chip>
+                        <!-- <app-chip *ngIf="items.length < 4" *ngFor="let number of Array(4-items.length).fill()">
+                        </app-chip> -->
+                        <input style="margin-left: 1rem;" *ngIf="items.length < 4" placeholder="{{placeHolder}}" #itemInput [formControl]="itemCtrl" [matAutocomplete]="auto"
+                                [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                (matChipInputTokenEnd)="add($event)">
+                </mat-chip-list>
+                <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                        <mat-option *ngFor="let item of filteredItems | async" [value]="item">
+                                {{item}}
+                        </mat-option>
+                </mat-autocomplete>
+        </mat-form-field>
+</div>
 <!-- <app-chip></app-chip> -->

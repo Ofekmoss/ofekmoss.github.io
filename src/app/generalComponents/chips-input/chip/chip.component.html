@@ -1,5 +1,5 @@
 <!-- [ngStyle]="{'background-color': backgroundColor }" -->
-<mat-chip [ngStyle]="{'visibility': !item ? 'hidden' :  'visible'}" class="chip" [selectable]="selectable" [removable]="removable" (removed)="remove(item)">
+<mat-chip [ngStyle]="{'visibility': !item ? 'hidden' :  'visible'}" class="chip" [selectable]="selectable" [removable]="removable" (removed)="remove(index)">
     {{item}}
     <button matChipRemove *ngIf="removable">
         <mat-icon>cancel</mat-icon>

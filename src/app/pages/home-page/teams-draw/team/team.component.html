@@ -1,6 +1,7 @@
 <div class="team__container">
     <app-stars-rate-sellection id="{{id}}" (starLevel)="starClicked($event)" [currentStar]="currentStar"></app-stars-rate-sellection>
-    <app-team-details [team]="team"></app-team-details>
-    <app-chip class="chip" [item]="teamPlayers[0]" [removable]="false"></app-chip>
-    <app-chip class="chip" [item]="teamPlayers[1]" [removable]="false"></app-chip>
+    <!-- [team]="team" -->
+    <app-team-details [id]="id" [teamInDraw]="true" class="team-details"></app-team-details>
+    <app-chip class="chip" [item]="teamPlayers[0] ? (userService.getUserById(teamPlayers[0].userId) ? userService.getUserById(teamPlayers[0].userId).username : teamPlayers[0].friendName) : null" [removable]="false"></app-chip>
+    <app-chip class="chip" [item]="teamPlayers[1] ? (userService.getUserById(teamPlayers[1].userId) ? userService.getUserById(teamPlayers[1].userId).username : teamPlayers[1].friendName) : null" [removable]="false"></app-chip>
 </div>

@@ -1,10 +1,22 @@
 <div class="team-details__container">
-    <h1>{{current_team.name}}</h1>
-    <!-- <img src="teams_img_path + current_team_img" alt="dsds"> -->
-    <img class="team__photo" src="{{current_team.image_path}}" alt="dsads">
-    <!-- [ngStyle]="{'background-image': 'url(src/app/images/cbayern.png)'}" -->
-    <!-- <div class="team__photo" 
-    [ngStyle]="{'background':'url('+ teams_img_path + current_team_img +''}"
-    >        
-    </div> -->
+    <div class="team-details" *ngIf="teamInDraw">
+        <!-- <h1>{{current_team.name | async}}</h1> -->
+        <div class="team-name">{{(team$ | async)?.name}}</div>
+        <!-- <img src="teams_img_path + current_team_img" alt="dsds"> -->
+        <img class="team__photo" src="{{(team$ | async)?.image_path}}">
+        <!-- [ngStyle]="{'background-image': 'url(src/app/images/cbayern.png)'}" -->
+        <!-- <div class="team__photo" 
+        [ngStyle]="{'background':'url('+ teams_img_path + current_team_img +''}"
+        >        
+        </div> -->
+    </div>
+    <div class="team-details" *ngIf="!teamInDraw">
+        <div class="team-name">{{team.name}}</div>
+        <img class="team__photo" src="{{team.image_path}}">
+        <!-- [ngStyle]="{'background-image': 'url(src/app/images/cbayern.png)'}" -->
+        <!-- <div class="team__photo" 
+        [ngStyle]="{'background':'url('+ teams_img_path + current_team_img +''}"
+        >        
+        </div> -->
+    </div>
 </div>

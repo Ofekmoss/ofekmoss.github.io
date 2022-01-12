@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-general-toggle-button',
   templateUrl: './general-toggle-button.component.html',
-  styleUrls: ['./general-toggle-button.component.css']
+  styleUrls: ['./general-toggle-button.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GeneralToggleButtonComponent implements OnInit {
   @Input() text: string;

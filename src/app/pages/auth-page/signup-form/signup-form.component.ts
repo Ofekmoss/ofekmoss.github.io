@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/shared/user.model';
@@ -6,7 +6,8 @@ import { User } from 'src/app/shared/user.model';
 @Component({
   selector: 'app-signup-form',
   templateUrl: './signup-form.component.html',
-  styleUrls: ['./signup-form.component.css']
+  styleUrls: ['./signup-form.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignupFormComponent implements OnInit {
   signupForm: FormGroup;

@@ -1,4 +1,3 @@
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .user-friends__container {
     width: 300px;
@@ -31,6 +30,7 @@
 .friends-list {
     width: 280px;
     height: inherit;
+    overflow: auto;
 }
 
 .add-friend__container {
@@ -46,26 +46,10 @@ form {
     align-items: center;
     justify-content: flex-end;
 }
-.add-friend-button::before {
-    content: '\f234';
-    font-family: FontAwesome;
-    /* padding: 0; */
-    /* margin: 5px; */
-    font-size: 30px;
-    /* display: inline-block; */
-    color: white;
-}
 
-button {
-    /* padding: 9px 15px; */
-    /* background-color: rgba(0,136,169,1); */
-    background: none;
+.add-friend-button {
+    padding-left: 6px;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition:  all 0.3 ease 0s;
-}
-
-.add-friend:hover button::before{
-    color: rgba(0,136,169,1);
+    background: none;
+    font-size: 30px;
 }

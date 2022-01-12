@@ -1,25 +1,29 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { TeamService } from 'src/app/services/team.service';
+import { UserService } from 'src/app/services/user.service';
+import { Chip } from 'src/app/shared/chip.model';
 import { Team } from 'src/app/shared/team.model';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
-  styleUrls: ['./team.component.css']
+  styleUrls: ['./team.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TeamComponent implements OnInit {
-  @Input() team:Team;
+  // @Input() team:Team;
+  team:Team;
   @Input() id:string;
-  @Input() teamPlayers:string[];
+  @Input() teamPlayers:Chip[];
   @Output() starLevel= new EventEmitter<string>();
   currentStar: number;
   subscription: Subscription;
 
-  constructor(private teamService: TeamService) { }
+  constructor(private teamService: TeamService, public userService: UserService) { }
 
   ngOnInit(): void {
-    // this.currentStar
+    console.log(this.teamPlayers)
     if (this.id === 'awayTeam'){
       this.subscription = this.teamService.teamB_changed.subscribe(
         () => {
@@ -74,5 +78,4 @@ export class TeamComponent implements OnInit {
     console.log(newItem)
     this.starLevel.emit(newItem)
   }
-
 }

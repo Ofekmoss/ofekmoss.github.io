@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 * {
     box-sizing: border-box;
@@ -29,6 +28,7 @@ header {
 .logo {
     cursor: pointer;
     color: #edf0f1;
+    font-size: 27px;
 }
 
 .nav__links {
@@ -66,20 +66,32 @@ button:hover {
     background-color: rgba(0,136,169,0.8);   
 }
 
-.user-button:before {
+.user-page {
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition:  all 0.3 ease 0s;
+}
+
+.user-page:hover {
+    background-color: rgba(0,136,169,0.8);   
+}
+/* 
+.user-button {
     content: '\f007';
     font-family: FontAwesome;
-    /* padding: 0; */
-    /* margin: 5px; */
     font-size: 25px;
     display: inline-block;
     color: white;
 }
-.user-button {
+*/
+.user-page {
     border-radius: 50px;
     padding: 6px 15px;
     margin-left: 5px;
-}
+} 
 
 .auth-headers {
     display: flex;

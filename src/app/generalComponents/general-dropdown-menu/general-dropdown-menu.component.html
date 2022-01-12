@@ -1,0 +1,8 @@
+<div class="general-dropdown-menu__container">
+    <button mat-button [matMenuTriggerFor]="menu" class="title" [disabled]="disabled">{{text}}</button>
+    <mat-menu #menu="matMenu">
+        <div class="menu">
+            <button (click)="onOptionClick(i)" mat-menu-item *ngFor="let item of optionList; let i=index">{{item.username}}</button>
+        </div>
+    </mat-menu>
+</div>

@@ -2,6 +2,9 @@
     width: 100%;
 }
 
+.mat-chip-list-class {
+    height: 1000px;
+}
 .chip-list__input {
     margin-left: 1rem;
 }
@@ -17,7 +20,7 @@ input {
     margin-bottom: 1000px;
 } */
 ::ng-deep .mat-chip-list-class div {
-    height: 50px;
-    margin-top: 10px;
+    height: 80px;
+    margin-top: 20px;
 }
 

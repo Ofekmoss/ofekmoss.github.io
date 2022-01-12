@@ -13,10 +13,10 @@
             [controlName]="'email'"
             [label]="'Email:'"
             ></app-input>
-            <app-input 
+            <!-- <app-input 
             [placeHolder]="'Old Password'"
             [type]="'password'"
-            [controlName]="'oldPassword'"></app-input>
+            [controlName]="'oldPassword'"></app-input> -->
             <app-input 
             [placeHolder]="'New Password'"
             [type]="'password'"
@@ -28,13 +28,9 @@
         <br>
         <app-general-button 
             [type]="'submit'"
-            [form]="profileEditForm"
             [text]="'EDIT'"
             class="submit-btn"
             ></app-general-button>
-        <!-- <button 
-            type="submit" 
-            class="btn-submit"
-            [disabled]="!signupForm.valid">signup</button> -->
+            <!-- [form]="profileEditForm" -->
     </form>
 </div>

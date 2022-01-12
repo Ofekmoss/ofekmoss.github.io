@@ -1,9 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-stars-rate-sellection',
   templateUrl: './stars-rate-sellection.component.html',
   styleUrls: ['./stars-rate-sellection.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StarsRateSellectionComponent implements OnInit {
   @Output() starLevel = new EventEmitter<string>();

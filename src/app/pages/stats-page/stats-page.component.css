@@ -1,0 +1,32 @@
+.stats-page__container {
+    background: url('../../../assets/images/stadium.jpg') center;
+    position: fixed;
+    background-size: cover; 
+    top: 0; 
+    left: 0; 
+    
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.data__games-graph {
+    width: 200px;
+    /* height: 200px; */
+}
+
+.stats-page__data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.data__games {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-data {
+    margin: 10px 0;
+}
