@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,8 +8,12 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePageComponent implements OnInit {
-  constructor() { }
+  constructor(private teamService: TeamService) { }
+  
 
   ngOnInit(): void {
+    this.teamService.getTeams_fromBE().subscribe(response => {
+      console.log(response);
+    });
   }
 }

@@ -4,27 +4,30 @@
     background-size: cover; 
     top: 0; 
     left: 0; 
-    
+    overflow-y: auto;
     /* Preserve aspet ratio */
     min-width: 100%;
     min-height: 100%;
 }
 
 .data__games-graph {
-    width: 200px;
-    /* height: 200px; */
+    width: 270px;
+    height: 235px;
 }
 
 .stats-page__data {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 450px;
+    /* margin-bottom: 50px; */
 }
 
 .data__games {
     width: 400px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .game-data {

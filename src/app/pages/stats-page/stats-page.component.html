@@ -2,7 +2,11 @@
     <app-headers></app-headers>
     <div class="stats-page__data">
         <div class="data__games-graph">
-            <app-general-pie-graph [chartLabels]="['win','draw','lose']"></app-general-pie-graph>
+            <app-general-pie-graph 
+                [chartLabels]="userGraphLabels"
+                [backgroundColors]= "['rgb(58 205 32)', 'rgb(199 217 50)','rgb(253 58 58)']"
+                [data]= "userGraphData"
+                ></app-general-pie-graph>
         </div>
         <div class="data__last-games-table">
             table

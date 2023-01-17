@@ -23,9 +23,6 @@ export class GeneralGameDataComponent implements OnInit {
     this.awayTeam = this.gameStatsService.getAwayTeamFromGameStats(this.game)
     this.homePlayers = this.gameStatsService.getHomePlayersFromGameStats(this.game)
     this.awayPlayers = this.gameStatsService.getAwayPlayersFromGameStats(this.game)
-    console.log(this.homePlayers)
-    console.log(this.awayPlayers)
-
   }
 
 }

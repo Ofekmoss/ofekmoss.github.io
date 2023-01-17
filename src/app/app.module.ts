@@ -52,6 +52,7 @@ import { StatsPageComponent } from './pages/stats-page/stats-page.component';
 import { GeneralGameDataComponent } from './generalComponents/general-game-data/general-game-data.component';
 import { GeneralPieGraphComponent } from './generalComponents/general-pie-graph/general-pie-graph.component';
 import { NgChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { NgChartsModule } from 'ng2-charts';
     MatButtonModule,
     MatDialogModule,
     FontAwesomeModule,
-    NgChartsModule
+    NgChartsModule,
+    HttpClientModule
   ],
   providers: [
   ],

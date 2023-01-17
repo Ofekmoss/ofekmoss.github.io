@@ -8,13 +8,16 @@ import { ChartData, ChartType } from 'chart.js';
 })
 export class GeneralPieGraphComponent implements OnInit {
   @Input() chartLabels: string[];
+  @Input() backgroundColors: string[];
+  @Input() data: number[];
   doughnutChartLabels: string[];
   doughnutChartData: ChartData<'doughnut'>;
   doughnutChartType: ChartType;
   public options: any = {
     plugins: {
-      legend: { position: 'left' }
-    }
+      legend: { position: 'left' },
+    },
+    
   }
   constructor() { }
 
@@ -24,8 +27,8 @@ export class GeneralPieGraphComponent implements OnInit {
       labels: this.doughnutChartLabels,
       datasets: [
         { 
-          data: [ 350, 450, 100 ],
-          // backgroundColor: ['green', 'yellow','red']
+          data: this.data,
+          backgroundColor: this.backgroundColors,
         },
       ],
     }

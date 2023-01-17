@@ -1,8 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import teams_json from "../../assets/teams_data/teams_data.json"
 import { Team } from '../shared/team.model';
 import { TeamsData } from '../shared/teamsData.model';
+import * as MatcherConstants from "src/app/shared/matcher.constants"
+import { catchError, map } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +44,7 @@ export class TeamService {
   getTeamB() {
     return this.subjectTeamB.getValue()
   }
-  constructor() {
+  constructor(private http: HttpClient) {
     let team: Team;
     let clubs_5: Team[] = [];
     let clubs_4_5: Team[] = [];
@@ -175,5 +179,16 @@ export class TeamService {
       return team;
     }
     return null;
+  }
+
+
+  public getTeams_fromBE() {
+    return this.http.get(MatcherConstants.BACKEND_URL, {}).pipe(map(responseData => {
+      console.log(responseData)
+      return responseData
+    }), catchError(error => {
+      console.log(error)
+      return error
+    }))
   }
 }

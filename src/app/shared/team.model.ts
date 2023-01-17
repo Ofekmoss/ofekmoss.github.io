@@ -13,6 +13,5 @@ export class Team {
             } else {
                 this.id = Math.floor(Math.random() * 1000000);
             }
-            console.log(this.id)
     }
 }

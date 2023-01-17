@@ -2,11 +2,6 @@ import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 
-export interface DialogData {
-  animal: string;
-  name: string;
-}
-
 @Component({
   selector: 'app-general-dialog',
   templateUrl: './general-dialog.component.html',
