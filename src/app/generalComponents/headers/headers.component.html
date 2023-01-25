@@ -4,13 +4,13 @@
     <nav>
         <ul class="nav__links">
             <li routerLinkActive="active"><a routerLink='/home'>Home</a></li>
-            <li routerLinkActive="active"><a routerLink='/who-plays'>Who Plays</a></li>
-            <li routerLinkActive="active"><a routerLink='/stats'>Stats</a></li>
-            <!-- <li><a href="#">Who Plays</a></li> -->
-            <!-- <li><a href="#">Logout</a></li> -->
+            
+            <!-- NOT NEED FOR ALPHA -->
+            <!-- <li routerLinkActive="active"><a routerLink='/who-plays'>Who Plays</a></li>
+            <li routerLinkActive="active"><a routerLink='/stats'>Stats</a></li> -->
         </ul>
     </nav>
-    <div class="auth-headers">
+    <div class="auth-headers hidden">
         <a (click)="onLogout()" class="cta"><button>{{guestUser ? 'Login' : 'Logout'}}</button></a>
         <div class="user-page" *ngIf="!guestUser">
             <app-general-fontawesome-icon

@@ -1,17 +1,15 @@
 export class Team {
-    public id: number;
+    // public name: string, 
+    // public league: string, 
+    // public rank: number, 
+    // public image_path: string, 
+    // public type: string,
     constructor(
-        public name: string, 
-        public league: string, 
-        public rank: number, 
-        public image_path: string, 
-        public type: string,
-        id?: number, 
-        ) {
-            if (id) {
-                this.id = id;
-            } else {
-                this.id = Math.floor(Math.random() * 1000000);
-            }
-    }
+        public id: number,
+        public name: string,
+        public country: string,
+        public league: string,
+        public rating: number,
+        public emblem_path: string,    
+    ) {}
 }

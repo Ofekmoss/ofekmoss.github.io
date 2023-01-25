@@ -16,7 +16,9 @@ export class UserService {
 
   getUserById(id: number) {
     let user = this.users.filter(user => user.id === id);
-    if (user.length !== 0) {
+    if (!this.authService.getUser()) {
+      return null;
+    } else if (user.length !== 0) {
       return user[0];
     } else if (this.authService.getUser().id === id) {
       let mainUserData = this.authService.getUser();

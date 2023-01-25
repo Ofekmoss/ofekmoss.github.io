@@ -12,6 +12,7 @@ export class AuthPageComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
+    // this.onEnterAsGuest(); //ONLY FOR ALPHA
   }
 
   onChangePage() {

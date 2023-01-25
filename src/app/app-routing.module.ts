@@ -13,7 +13,8 @@ import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { WhoPlaysPageComponent } from './pages/who-plays-page/who-plays-page.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'auth', pathMatch: 'full'},
+  // {path: '', redirectTo: 'auth', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'users', component: UsersPageComponent},
   {
     path: 'user', component: UserPageComponent,

@@ -34,8 +34,10 @@ export class TeamsDrawComponent implements OnInit {
   
   constructor(private teamService: TeamService, private userService: UserService, private authService: AuthService, private gameStatsService: GameStatsService) {
     this.teams_data= teamService.getTeams();
-    this.current_teamA= new Team(this.teams_data[0].name,this.teams_data[0].league,this.teams_data[0].rank,this.teams_data[0].image_path, this.teams_data[0].type, this.teams_data[0].id)
-    this.current_teamB= new Team(this.teams_data[1].name,this.teams_data[1].league,this.teams_data[1].rank,this.teams_data[1].image_path, this.teams_data[1].type, this.teams_data[1].id)
+    // this.current_teamA= new Team(this.teams_data[0].name,this.teams_data[0].league,this.teams_data[0].rating,this.teams_data[0].image_path, this.teams_data[0].type, this.teams_data[0].id)
+    // this.current_teamB= new Team(this.teams_data[1].name,this.teams_data[1].league,this.teams_data[1].rating,this.teams_data[1].image_path, this.teams_data[1].type, this.teams_data[1].id)
+    this.current_teamA= new Team(this.teams_data[0].id,this.teams_data[0].name,this.teams_data[0].country,this.teams_data[0].league,this.teams_data[0].rating,this.teams_data[0].emblem_path);
+    this.current_teamA= new Team(this.teams_data[1].id,this.teams_data[1].name,this.teams_data[1].country,this.teams_data[1].league,this.teams_data[1].rating,this.teams_data[1].emblem_path);
    }
 
    ngOnInit(): void {
@@ -94,7 +96,7 @@ export class TeamsDrawComponent implements OnInit {
 
   private playersDraw() {
     let friendsChips = this.currentPlayers.find(x => x.friend ? true : false)
-    let mainUserChip = this.currentPlayers.find(x => x.userId === this.authService.getUser().id ? true : false)
+    let mainUserChip = this.authService.getUser() ? this.currentPlayers.find(x => x.userId === this.authService.getUser().id ? true : false) : null;
     if (friendsChips && mainUserChip) {
       this.drawBeforeDialogOpen = true;
     }
@@ -138,11 +140,12 @@ export class TeamsDrawComponent implements OnInit {
         // console.log(teams);
         let current_team = teams[0]
         // console.log(current_team);
-        // this.current_teamA = new Team(current_team.name, current_team.league, current_team.rank, current_team.image_path, current_team.type);;
-        this.teamService.loadTeamA(new Team(current_team.name, current_team.league, current_team.rank, current_team.image_path, current_team.type, current_team.id))
+        // this.current_teamA = new Team(current_team.name, current_team.league, current_team.rating, current_team.image_path, current_team.type);;
+        // this.teamService.loadTeamA(new Team(current_team.name, current_team.league, current_team.rating, current_team.image_path, current_team.type, current_team.id))
+        this.teamService.loadTeamA(new Team(current_team.id, current_team.name, current_team.country, current_team.league, current_team.rating, current_team.emblem_path))
         current_team = teams[1]
         // console.log(current_team);
-        this.teamService.loadTeamB(new Team(current_team.name, current_team.league, current_team.rank, current_team.image_path, current_team.type, current_team.id))
+        this.teamService.loadTeamB(new Team(current_team.id, current_team.name, current_team.country, current_team.league, current_team.rating, current_team.emblem_path))
         this.current_teamB = teams[1];
         // console.log('team service on draw');
         if (this.currentPlayers.length !== 0) {
@@ -174,6 +177,7 @@ export class TeamsDrawComponent implements OnInit {
 
   onNationalClick() {
     this.checkIfOpenDialog()
+    this.teamService.clubsDraw = !this.teamService.clubsDraw;
   }
 
   onSyncStarsClick() {

@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { TeamService } from 'src/app/services/team.service';
 
 @Component({
@@ -7,13 +8,23 @@ import { TeamService } from 'src/app/services/team.service';
   styleUrls: ['./home-page.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit, OnDestroy {
+  teamSub: Subscription;
   constructor(private teamService: TeamService) { }
-  
+
 
   ngOnInit(): void {
-    this.teamService.getTeams_fromBE().subscribe(response => {
+    this.firstTeamLoad();
+  }
+  
+  firstTeamLoad() {
+    this.teamSub = this.teamService.getTeamsList().subscribe(response => {
+      
       console.log(response);
     });
+  }
+
+  ngOnDestroy(): void {
+    this.teamSub.unsubscribe();
   }
 }

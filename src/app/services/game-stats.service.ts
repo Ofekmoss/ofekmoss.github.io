@@ -14,7 +14,9 @@ import { UserService } from './user.service';
 export class GameStatsService {
   gamesStats: GameStats[] = [];
   constructor(private teamService: TeamService, private userService: UserService, private authService: AuthService) {
-    this.gamesStats = [...this.gamesStats, new GameStats([authService.getUser().id], 3, 2, true, [userService.userFriends[0].id], 4, 1, false), new GameStats([authService.getUser().id, userService.userFriends[2].id], 1, 2, false, [], 6, 1, true), new GameStats([authService.getUser().id, userService.userFriends[1].id], 2, 12, false, [userService.userFriends[2].id], 7, 18, false), new GameStats([authService.getUser().id], 6, 1, false, [userService.userFriends[1].id, userService.userFriends[2].id], 5, 1, false)]
+    
+    // FAKE GAME STATS - NOT FOR ALPHA
+    // this.gamesStats = [...this.gamesStats, new GameStats([authService.getUser().id], 3, 2, true, [userService.userFriends[0].id], 4, 1, false), new GameStats([authService.getUser().id, userService.userFriends[2].id], 1, 2, false, [], 6, 1, true), new GameStats([authService.getUser().id, userService.userFriends[1].id], 2, 12, false, [userService.userFriends[2].id], 7, 18, false), new GameStats([authService.getUser().id], 6, 1, false, [userService.userFriends[1].id, userService.userFriends[2].id], 5, 1, false)]
   }
 
   newGameStats(score: number[], players: TeamPlayers) {

@@ -1,18 +1,14 @@
 import { Team } from "./team.model";
-
+interface ratingObject {
+    "5_stars": Team[]; 
+    '4.5_stars': Team[]; 
+    '4_stars': Team[];
+    '3.5_stars': Team[]; 
+}
 export class TeamsData {
-    public clubs= { 
-        "5_stars": [], 
-        '4.5_stars':[], 
-        '4_stars':[], 
-        '3.5_stars':[] 
-    }
-    public national= { 
-        "5_stars": [], 
-        '4.5_stars':[], 
-        '4_stars':[], 
-        '3.5_stars':[] 
-    }
+    public clubs: ratingObject = {} as ratingObject;
+    public national: ratingObject = {} as ratingObject;
+
     constructor(
         clubs_5: Team[],
         clubs_4_5: Team[],
@@ -23,6 +19,7 @@ export class TeamsData {
         national_4: Team[],
         national_3_5: Team[],
     ) {
+        console.log(this.clubs)
         this.clubs["5_stars"] = clubs_5;
         this.clubs["4.5_stars"] = clubs_4_5;
         this.clubs["4_stars"] = clubs_4;

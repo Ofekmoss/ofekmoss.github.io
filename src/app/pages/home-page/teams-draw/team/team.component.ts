@@ -43,8 +43,6 @@ export class TeamComponent implements OnInit {
           }
           // this.currentStar = this.teamService.teamB_level;
           console.log(this.currentStar)
-          console.log(this.teamService.teamA_level)
-          console.log(this.teamService.teamB_level)
         } 
       )
     } else if (this.id === 'homeTeam'){
